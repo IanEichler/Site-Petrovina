@@ -31,11 +31,11 @@ document.addEventListener('click', event => { if (!header.contains(event.target)
 window.matchMedia('(min-width:1101px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
 
 const crops = {
-  soja: {name:'Soja', image:'media/soja.webp', description:'O potencial da sua próxima safra começa na escolha da semente. Explore as cultivares de soja da Petrovina e conte com a orientação do nosso time para encontrar a melhor opção para o seu campo.', path:'semente-de-soja/'},
-  milho: {name:'Milho', image:'media/milho.webp', description:'Cada ciclo traz uma nova oportunidade. Conheça o portfólio de milho da Petrovina e converse com um especialista sobre as opções para o seu planejamento de plantio.', path:'sementes-de-milho/'},
-  sorgo: {name:'Sorgo', image:'media/sorgo.webp', description:'Novas possibilidades para o seu planejamento agrícola. Explore o portfólio de sorgo e receba orientação para escolher a semente de acordo com a realidade da sua lavoura.', path:'sementes-de-sorgo/'},
-  algodao: {name:'Algodão', image:'media/algodao.webp', description:'Qualidade que começa na origem e acompanha o desenvolvimento da cultura. Descubra as sementes de algodão da Petrovina e conte com uma equipe próxima do seu campo.', path:'sementes-de-algodao/'},
-  brachiaria: {name:'Brachiaria', image:'media/brachiaria.webp', description:'Uma boa base abre espaço para novos resultados. Conheça as opções de brachiaria da Petrovina e encontre, com nosso time, a escolha para o seu próximo ciclo.', path:'sementes-de-brachiaria/'}
+  soja: {name:'Soja', image:'media/soja-hd.webp', description:'O potencial da sua próxima safra começa na escolha da semente. Explore as cultivares de soja da Petrovina e conte com a orientação do nosso time para encontrar a melhor opção para o seu campo.', path:'semente-de-soja/'},
+  milho: {name:'Milho', image:'media/milho-hd.webp', description:'Cada ciclo traz uma nova oportunidade. Conheça o portfólio de milho da Petrovina e converse com um especialista sobre as opções para o seu planejamento de plantio.', path:'sementes-de-milho/'},
+  sorgo: {name:'Sorgo', image:'media/sorgo-hd.webp', description:'Novas possibilidades para o seu planejamento agrícola. Explore o portfólio de sorgo e receba orientação para escolher a semente de acordo com a realidade da sua lavoura.', path:'sementes-de-sorgo/'},
+  algodao: {name:'Algodão', image:'media/algodao-hd.webp', description:'Qualidade que começa na origem e acompanha o desenvolvimento da cultura. Descubra as sementes de algodão da Petrovina e conte com uma equipe próxima do seu campo.', path:'sementes-de-algodao/'},
+  brachiaria: {name:'Brachiaria', image:'media/brachiaria-hd.webp', description:'Uma boa base abre espaço para novos resultados. Conheça as opções de brachiaria da Petrovina e encontre, com nosso time, a escolha para o seu próximo ciclo.', path:'sementes-de-brachiaria/'}
 };
 const dialog = document.querySelector('.crop-dialog');
 let cropOpener;
@@ -47,6 +47,9 @@ document.querySelectorAll('[data-crop]').forEach(button => {
     dialog.querySelector('h2').textContent = crop.name;
     const image = dialog.querySelector('.dialog-image img');
     image.src = crop.image;
+    const base = crop.image.replace('-hd.webp', '');
+    image.srcset = `${base}-480.webp 480w, ${base}-800.webp 800w, ${crop.image} 1122w`;
+    image.sizes = '(max-width: 680px) calc(100vw - 30px), 385px';
     image.alt = `Cultura de ${crop.name.toLowerCase()}`;
     dialog.querySelector('.dialog-description').textContent = crop.description;
     dialog.querySelector('.dialog-portfolio').href = `https://petrovinasementes.com.br/${crop.path}`;

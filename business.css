@@ -29,7 +29,7 @@
 .online-crops a:hover { color: #64852f; }
 .online-crops img { width: 35px; height: 35px; object-fit: cover; border-radius: 50%; }
 .online-crop-photo { display: block; flex: none; width: 35px; height: 35px; overflow: hidden; border-radius: 50%; }
-.online-crop-photo img { width: 100%; height: 150%; border-radius: 0; object-fit: cover; object-position: center top; }
+.online-crop-photo img { width: 100%; height: 100%; border-radius: 0; object-fit: cover; object-position: center 35%; }
 .online-crops .icon { margin-left: auto; width: 14px; height: 14px; }
 .solutions-foot > h3 { color: #f1f5e9; }
 .solution-quick-links { display: flex; flex-wrap: wrap; gap: 17px 35px; }
@@ -112,7 +112,7 @@
 .quote-crop > span { display: flex; flex-direction: column; gap: 16px; align-items: center; padding: 21px; border: 1px solid var(--line); border-radius: 11px; background: #fff; transition: border-color .2s,background .2s; }
 .quote-crop img { width: 110px; height: 110px; object-fit: cover; border-radius: 50%; }
 .quote-crop-photo { display: block; width: 110px; height: 110px; overflow: hidden; border-radius: 50%; }
-.quote-crop .quote-crop-photo img { width: 100%; height: 150%; border-radius: 0; object-fit: cover; object-position: center top; }
+.quote-crop .quote-crop-photo img { width: 100%; height: 100%; border-radius: 0; object-fit: cover; object-position: center 35%; }
 .quote-crop > span > span { font-size: var(--type-body); }
 .quote-crop > input:checked + span { border-color: var(--forest); background: #e9efde; box-shadow: inset 0 0 0 1px var(--forest); }
 .quote-crop > input:focus-visible + span { outline: 2px solid #72972b; outline-offset: 4px; }

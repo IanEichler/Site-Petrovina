@@ -1,6 +1,6 @@
 CRÉDITOS E REFERÊNCIAS
 
-Marca, logotipo, fotografias das culturas e imagens dos artigos:
+Marca, logotipo e materiais institucionais originais:
 https://petrovinasementes.com.br/
 Fonte: Inter, distribuída localmente.
 Dados institucionais: cinco culturas no portfólio; quatro centros de distribuição
@@ -71,3 +71,62 @@ media/negocio-producao.webp: https://petrovinasementes.com.br/wp-content/uploads
 media/negocio-commodities.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/COMMODITIES.webp
 media/negocio-armazenagem.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/ARMAZENAGEM-1.webp
 Consulta dos materiais oficiais: 14/10/2026. Layout e código locais independentes.
+
+REVISÃO DE QUALIDADE DAS IMAGENS — 14/10/2026
+Todas as fotografias utilizadas foram substituídas por novas imagens ou pelas versões originais de maior resolução disponíveis. Logotipo, identidade dos produtos, selos e mapa foram preservados.
+As imagens conceituais não identificam uma fazenda, cultivar ou colaborador específico. O bicudo é uma recriação ilustrativa a partir da miniatura original, não um registro de diagnóstico.
+Ferramenta: image_gen integrada (modo built-in); sem CLI/API externa.
+
+Arquivo final: media/soja-hd.webp — 1122 × 1402 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution crop photograph for an agricultural seed website; one image only, portrait 4:5 composition, at least 1536 pixels tall. Style: premium editorial agricultural photography, authentic Brazilian farm, optically crisp fine natural details, realistic greens, soft warm morning side light, natural depth of field. Main subject in the middle and upper half, a softly blurred lower quarter allowing text to be added later in HTML. Fill the entire photograph edge to edge. No text, typography, numbers, labels, logos, watermark, collage, graphic elements, border, excessive blur on the main subject, or fake HDR. Primary request: Close photograph of mature soybean pods (Glycine max) still on upright stems in a Brazilian soybean field at harvest time. Three or four naturally hanging tan brown, delicately fuzzy pods with realistic swelling of 2 to 3 seeds each, dry trifoliate leaves and stems, a few green leaves in the distance. Pods distinct and sharp near the vertical center, tactile fine hairs visible, softly defocused soybean rows and quiet pale blue sky behind. Botanically accurate soybean, not peas or beans in an opened pod.
+
+Arquivo final: media/milho-hd.webp — 1122 × 1402 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution crop photograph for an agricultural seed website; one image only, portrait 4:5 composition, at least 1536 pixels tall. Style: premium editorial agricultural photography, authentic Brazilian farm, optically crisp fine natural details, realistic greens, soft warm morning side light, natural depth of field. Main subject in the middle and upper half, a softly blurred lower quarter allowing text to be added later in HTML. Fill the entire photograph edge to edge. No text, typography, numbers, labels, logos, watermark, collage, graphic elements, border, excessive blur on the main subject, or fake HDR. Primary request: Close photograph of a ripe ear of field maize (Zea mays) growing upright on the living plant, its natural green husk partially opened to reveal neat dense golden yellow kernels, silky brown tassels at its tip, rich green elongated leaves around it, maize field softly out of focus behind. The single beautiful ear is central and entirely recognizable in the upper two thirds. Authentic field maize, not a plated food photo or floating corn cob.
+
+Arquivo final: media/sorgo-hd.webp — 1122 × 1402 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution crop photograph for an agricultural seed website; one image only, portrait 4:5 composition, at least 1536 pixels tall. Style: premium editorial agricultural photography, authentic Brazilian farm, optically crisp fine natural details, realistic greens, soft warm morning side light, natural depth of field. Main subject in the middle and upper half, a softly blurred lower quarter allowing text to be added later in HTML. Fill the entire photograph edge to edge. No text, typography, numbers, labels, logos, watermark, collage, graphic elements, border, excessive blur on the main subject, or fake HDR. Primary request: Close photograph of one healthy mature grain sorghum seed head (Sorghum bicolor) growing on an upright stem in a Brazilian grain field. Dense naturally branched compact oval panicle made of hundreds of tiny round reddish brown, amber and bronze grains with botanical accuracy, broad green strap-like sorghum leaves below, other panicles and field softly out of focus behind. The hero seed head is prominent and crisp in the upper middle with clear silhouette. Not corn, wheat, millet or a pinecone.
+
+Arquivo final: media/algodao-hd.webp — 1122 × 1402 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution crop photograph for an agricultural seed website; one image only, portrait 4:5 composition, at least 1536 pixels tall. Style: premium editorial agricultural photography, authentic Brazilian farm, optically crisp fine natural details, realistic greens, soft warm morning side light, natural depth of field. Main subject in the middle and upper half, a softly blurred lower quarter allowing text to be added later in HTML. Fill the entire photograph edge to edge. No text, typography, numbers, labels, logos, watermark, collage, graphic elements, border, excessive blur on the main subject, or fake HDR. Primary request: Close photograph of two open ripe cotton bolls (Gossypium hirsutum) on a natural thin branching brown stem, bright tactile white cotton fibers emerging from dry brown pointed bracts, a few authentic broad green cotton leaves, cotton field softly out of focus behind under a calm blue sky. The fluffy bolls remain crisp and recognizable in the central upper part of the frame. Cotton must look naturally grown on a living plant, with four or five locks per boll, not loose artificial cotton balls.
+
+Arquivo final: media/brachiaria-hd.webp — 1122 × 1402 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution crop photograph for an agricultural seed website; one image only, portrait 4:5 composition, at least 1536 pixels tall. Style: premium editorial agricultural photography, authentic Brazilian farm, optically crisp fine natural details, realistic greens, soft warm morning side light, natural depth of field. Main subject in the middle and upper half, a softly blurred lower quarter allowing text to be added later in HTML. Fill the entire photograph edge to edge. No text, typography, numbers, labels, logos, watermark, collage, graphic elements, border, excessive blur on the main subject, or fake HDR. Primary request: Close photograph of a healthy lush stand of Brachiaria brizantha (Urochloa brizantha) forage grass growing in a Brazilian pasture. Long broad flat bright-green blades, some curving gently with delicate visible veins, fine authentic seed heads with several short racemes along a central stalk, botanically accurate tropical brachiaria rather than wheat or ornamental pampas grass. Main grass blades crisp and dimensional in the upper middle, luminous natural field vegetation softly out of focus behind. Fresh abundant healthy pasture, no livestock.
+
+Arquivo final: media/campo-hero-hd.webp — 1672 × 941 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: full-width high-resolution agricultural website hero background. Primary request: create a premium natural aerial landscape photograph of an immense lush soybean farm in Mato Grosso, Brazil. Landscape 16:9, target 3840x2160. Low oblique drone view over beautifully defined long parallel rows of healthy deep green soybean plants receding from the foreground into a distant flat horizon and low native tree line. The fine texture of individual leaves is visible in the foreground, warm soft sunrise from the upper right, thin natural haze, pale sky only top 15 percent. Composition: quieter darker green foliage on the left for a large white HTML headline and beautiful sunlit field detail on the right. Real agricultural editorial photography, natural color and crisp optical detail. No buildings, machinery, people, text, typography, logo, watermark, border, collage, graphic symbols, excessive saturation or artificial HDR. Entire image is photograph.
+
+Arquivo final: media/cuidado-no-campo-hd.webp — 1536 × 1024 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: wide editorial photograph for a premium Brazilian seed company website, used as a full-width hero and about-section image. Landscape 3:2, target 3072x2048. Close view of an agricultural professional's natural two adult hands and olive unbranded work-shirt forearms gently holding and inspecting the trifoliate leaves of a healthy soybean plant in a Brazilian soybean field. No face or identifying person. Authentic leaf veins, soft realistic skin details, lush deep-green foliage, plant-height camera, gentle morning sunlight. Main hands and plant centered slightly right, landscape framing with enough green field on the left for HTML copy, softly defocused distant crop rows. Clear photographic detail and honest natural colors, calm professional feeling. No text, typography, captions, logos, badges, watermark, collage, frames, fabricated uniforms or extra fingers.
+
+Arquivo final: media/soja-sementes-hd.webp — 1536 × 1024 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution agricultural editorial photograph for seeds and commodities web sections, landscape 3:2 target 3072x2048. Extreme close view of a generous small mound of dry mature golden beige soybeans, Glycine max, resting in a farmer's two naturally cupped hands, only palms visible at the bottom and no face or identity. Botanically correct round slightly oval soybeans with small brown hilum, fine matte texture and natural size variation, sharp seed detail across the central plane. Background softly blurred dark green soybean field in natural warm morning light. Restrained true colors, tactile premium editorial photography, keep seeds prominent and central for flexible cropping. No maize or wheat, no text, typography, logos, watermark, collage, graphic overlay, border, extra fingers or overly polished plastic seeds.
+
+Arquivo final: media/algodao-campo-hd.webp — 1536 × 1024 px
+Prompt final:
+Use case: photorealistic-natural. Asset type: high-resolution agricultural editorial photograph for a website article about cotton cultivation, landscape 3:2 target 3072x2048. Wide close view along a thriving Brazilian cotton field ready for harvest. Natural brown stems and broad dusty-green cotton leaves with several ripe open white cotton bolls, gently sunlit tactile fibers, background rows continuing toward a distant low green horizon. Crisp botanically accurate cotton bolls in the central foreground with multiple locks emerging from dry brown pointed bracts, natural early morning side light, softly blurred distant field, premium editorial campaign photograph with authentic texture and natural color. No people, text, logos, typography, watermark, collage, frames, graphical elements or extreme saturation.
+
+Arquivo final: media/bicudo-hd.webp — 1536 × 1024 px
+Prompt final:
+Use case: precise-object-edit. Asset type: high-resolution editorial macro photo for a cotton farming article. Edit the reference photo to recreate it with excellent optical sharpness and natural photographic detail at landscape 3:2 aspect ratio. Preserve the reference subject identity: the small mottled gray brown boll weevil Anthonomus grandis with a long slender curved snout, six legs, elbowed antennae and authentic granular beetle elytra, standing on a green cotton bud. Preserve the species, anatomy, pose, the general left-side body / right-facing snout composition, green plant context and soft green background. Replace the blocky compression and blur with clear believable macro detail on the beetle and bud. Natural light, realistic colors, shallow depth of field. No text, logo, watermark, illustration, collage, border or graphic elements.
+
+VERSÕES INSTITUCIONAIS EM MAIOR QUALIDADE
+media/carga-termica-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/03/43025a2f-b507-40e1-b3d7-4d8895a37b69-2048x1152.png
+media/cd-parecis-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/cd-campo-novo-parecis.webp
+media/cd-lucas-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/cd-lucas-do-rio-verde.webp
+media/cd-agua-boa-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/Captura-de-Tela-2024-02-16-as-08.29.00.webp
+media/cd-farroupilha-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/Captura-de-Tela-2024-02-16-as-08.31.22.webp
+media/seed-laboratorio-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/IMG_5537-scaled.jpg
+media/seed-analise-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/IMG_5716-scaled.jpg
+media/equipe-mapa-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/SO-MAPA.png
+media/primepro-eco-bag-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/07/PrimePro-Eco-Petrovina-Sementes.png
+media/primepro-eco-semente-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/07/PrimeproEco-1.png
+media/primepro-referencias-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/07/selos-2-1-scaled.png
+WebP com variantes responsivas, sem ampliar artificialmente os arquivos de origem. Os recortes são feitos pelo CSS e preservam o arquivo completo.

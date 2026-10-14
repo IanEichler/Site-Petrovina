@@ -37,8 +37,8 @@ O painel de commodities é fornecido pelo IMEA e disponibilizado pela Nexar Agro
 seus dados, filtros e datas são apresentados pelo relatório público original.
 Blog, newsletter, portal do cliente, consultor virtual e mapas abrem os serviços
 originais e precisam de internet. Não há envio automático de mensagens ou formulários.
-Imagens de abertura e cuidado no campo são conceituais; as demais imagens de
-produto e estrutura vêm dos materiais institucionais. Veja CREDITOS.txt.
+Fotografias de culturas, lavoura e campo são conceituais. Imagens de produto,
+laboratório, mapa e estrutura vêm dos materiais institucionais. Veja CREDITOS.txt.
 
 ARQUIVOS
 style.css: identidade e estilos principais.

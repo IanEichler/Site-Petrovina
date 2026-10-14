@@ -384,16 +384,19 @@ p, .hero-description, .section-heading > p, .essence-lead,
     width: calc(100% - 40px);
     margin-inline: auto;
     padding: 72px 0 80px;
+    text-align: center;
   }
   .hero h1 { max-width: 100%; margin: 0; }
-  .hero-description { max-width: 100%; margin-top: 24px; }
-  .hero-actions { align-items: stretch; gap: 13px; margin-top: 28px; max-width: 360px; }
+  .hero-description { max-width: 100%; margin-top: 24px; margin-inline: auto; }
+  .hero-actions { align-items: stretch; gap: 13px; margin: 28px auto 0; max-width: 360px; }
   .hero-actions .button, .hero-secondary {
-    justify-content: space-between;
+    position: relative;
+    justify-content: center;
     min-height: 53px;
     width: 100%;
-    padding: 15px 18px;
+    padding: 15px 40px;
   }
+  .hero-actions .icon { position: absolute; right: 18px; top: 50%; transform: translateY(-50%); }
   .mobile-nav:not([hidden]) { padding-inline: 20px; }
   .mobile-nav > a { padding-block: 18px; }
   .mobile-nav .mobile-contact { padding: 16px; margin-top: 22px; }

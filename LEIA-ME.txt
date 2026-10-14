@@ -1,0 +1,56 @@
+PETROVINA SEMENTES — NOVA IDENTIDADE VISUAL
+
+Website local em HTML, CSS e JavaScript. Não utiliza GPT Sites ou WordPress.
+
+ABRIR
+Clique duas vezes em Iniciar.cmd ou execute node server.cjs.
+Acesse http://localhost:4173/
+Requer Node.js. Não é necessário instalar pacotes.
+
+PÁGINAS LOCAIS
+index.html: página inicial, orçamento, culturas, soluções, commodities e conteúdos.
+primepro-eco.html: apresentação do PrimePro Eco.
+orcamento.html: seleção da cultura e acesso ao orçamento oficial.
+commodities.html: apresentação e painel público de soja.
+negocios-solucoes.html: central de negócios e soluções.
+petrovina-prime.html: sementes e serviços Prime.
+distribuicao.html: rede e quatro pontos de distribuição.
+carga-termica.html: cuidado com o transporte de sementes.
+freereplant.html: apresentação do programa de replantio.
+equipe-comercial.html: atendimento e presença no campo.
+seed-prime.html: laboratório de análise de sementes.
+credito-proprio.html: modalidade de compra diretamente com a Petrovina.
+
+FUNCIONALIDADES
+Menu de serviços acessível por clique e teclado; menu móvel com subcategorias.
+Cabeçalho branco que encolhe após 180 px de rolagem e retorna abaixo de 120 px.
+Detalhes de cinco culturas em janela acessível; seleção de cultura no orçamento.
+O acesso ao portfólio a partir do orçamento abre a cultura selecionada na página inicial.
+Painel externo de soja carregado somente após o clique em Carregar painel.
+Navegação entre as páginas locais, perguntas frequentes e botão para voltar ao topo.
+Tipografia Inter local, layouts responsivos e respeito a movimento reduzido.
+
+DADOS E DESTINOS EXTERNOS
+A cotação comercial, identificação por CPF, valores e disponibilidade continuam
+no portal oficial da Petrovina. O site local não coleta CPF nem simula preços.
+O painel de commodities é fornecido pelo IMEA e disponibilizado pela Nexar Agro;
+seus dados, filtros e datas são apresentados pelo relatório público original.
+Blog, newsletter, portal do cliente, consultor virtual e mapas abrem os serviços
+originais e precisam de internet. Não há envio automático de mensagens ou formulários.
+Imagens de abertura e cuidado no campo são conceituais; as demais imagens de
+produto e estrutura vêm dos materiais institucionais. Veja CREDITOS.txt.
+
+ARQUIVOS
+style.css: identidade e estilos principais.
+primepro.css: banner e página do PrimePro Eco.
+business.css: menu ampliado, orçamento, negócios e soluções.
+app.js e business.js: navegação e interações.
+media/: fotografias, imagens de produto, logotipo e fonte.
+server.cjs e Iniciar.cmd: servidor local.
+
+PUBLICAÇÃO NA VERCEL
+Importe IanEichler/Site-Petrovina usando a raiz do repositório.
+Framework: Other. Build: npm run build. Saída: dist. Node.js: 24.x.
+Essas opções estão em vercel.json; não há variáveis de ambiente obrigatórias.
+A cotação e os demais serviços externos continuam em seus destinos oficiais.
+Veja README.md para os detalhes de publicação e desenvolvimento.

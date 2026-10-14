@@ -1,0 +1,73 @@
+CRÉDITOS E REFERÊNCIAS
+
+Marca, logotipo, fotografias das culturas e imagens dos artigos:
+https://petrovinasementes.com.br/
+Fonte: Inter, distribuída localmente.
+Dados institucionais: cinco culturas no portfólio; quatro centros de distribuição
+e mais de 40 profissionais conforme banner institucional do site de referência.
+Novo layout, textos editoriais e código: criados para este projeto local.
+As marcas e os materiais originais pertencem aos respectivos titulares.
+
+IMAGEM DE ABERTURA
+Arquivo: media/campo-hero.webp
+Criada com a ferramenta integrada de geração de imagens; imagem conceitual.
+Prompt final:
+Use case: photorealistic-natural. Asset type: cinematic wide website hero photograph for a premium Brazilian agricultural seed company. Generate one photorealistic photograph, landscape 16:9 panoramic composition. Vast healthy deep-green soybean field in Mato Grosso, Brazil, seen from a drone at low oblique angle, elegant long perfectly parallel crop rows sweeping from the bottom foreground toward the far right horizon, expansive textured green canopy and rich fine detail, subtle terracotta soil glimpsed between rows. Low golden morning sunlight from the upper right, soft atmospheric haze and a distant low tree line, sky takes only the upper 15 percent. Natural realistic colors, sophisticated editorial landscape photography, tactile and immersive, premium agricultural campaign aesthetic. Composition: left third slightly darker softly shaded green field with simpler visual texture to accommodate a white headline overlaid later in HTML; most photographic detail and warm sunlight on the right two thirds. No people, machinery, buildings, graphical overlays, text, logos, watermarks, labels, diagrams, or typography.
+
+
+SEÇÃO A PETROVINA — REVISÃO VISUAL
+Imagem: media/cuidado-no-campo.webp
+Imagem conceitual criada com a ferramenta integrada de geração de imagens;
+não identifica um colaborador ou uma fazenda específica.
+Prompt final:
+Use case: photorealistic-natural. Asset type: portrait editorial photograph for the about section of a premium Brazilian seed company website. Generate one realistic photographic image in a portrait 4:5 composition. Close-up of an agricultural professional's two adult hands and forearms gently inspecting the healthy trifoliate leaves of a soybean plant growing in a lush soybean field in Mato Grosso, Brazil. The person wears an unbranded muted olive work shirt, with only hands and forearms visible; no face and no identifiable person. Camera at plant height, leafy soybean rows continuing into a softly blurred green background. Beautiful natural soft morning sunlight, rich organic greens, honest earthy skin textures and authentic plant structure, crisp foreground leaves with delicate veins, professional editorial photography, warm quiet confident mood. Hands and plant occupy the middle and lower thirds, with breathing room above. No captions, text, typography, logos, brand marks, watermarks, collage, frames, icons, or graphic overlays.
+
+Texto PrimePro Eco revisado com base na apresentação oficial da Petrovina:
+https://petrovinasementes.com.br/semente-carbono-zero/
+Consulta: 14/10/2026. Descrição da iniciativa conforme informações da empresa.
+
+PRIMEPRO ECO — PÁGINA LOCAL E BANNER
+Página: primepro-eco.html / Estilos: primepro.css
+Imagens originais de produto, convertidas para WebP preservando a transparência:
+media/primepro-eco-bag.webp
+https://petrovinasementes.com.br/wp-content/uploads/2026/07/PrimePro-Eco-Petrovina-Sementes.png
+media/primepro-eco-semente.webp
+https://petrovinasementes.com.br/wp-content/uploads/2026/07/PrimeproEco-1.png
+media/primepro-referencias.webp
+https://petrovinasementes.com.br/wp-content/uploads/2026/07/selos-2-1-scaled.png
+Informações editoriais e escopos de emissão: apresentação oficial da Petrovina,
+https://petrovinasementes.com.br/semente-carbono-zero/ (consulta: 14/10/2026).
+Os selos são reproduzidos como referências apresentadas na iniciativa oficial.
+Direção visual, estrutura, navegação e interações locais criadas para este projeto.
+
+Definicoes dos escopos de emissao tambem conferidas no GHG Protocol:
+https://ghgprotocol.org/sites/default/files/2022-12/FAQ_0.pdf
+
+NEGÓCIOS, SOLUÇÕES, ORÇAMENTO E COMMODITIES
+Petrovina Prime: https://petrovinasementes.com.br/petrovina-prime-melhores-sementes-de-soja/
+Pontos de distribuição: https://petrovinasementes.com.br/distribuicao-de-sementes/
+Carga térmica: https://petrovinasementes.com.br/carga-termica-transporte-de-sementes/
+Freereplant: https://petrovinasementes.com.br/freereplant-3/
+Equipe comercial: https://petrovinasementes.com.br/equipe-comercial-3/
+Seed Prime: https://petrovinasementes.com.br/seed-prime-analise-de-sementes/
+Crédito próprio: https://petrovinasementes.com.br/credito-para-comprar-sementes/
+Commodities: https://nexaragro.com.br/commodities/
+Painel público do IMEA, disponibilizado pela Nexar Agro e incorporado via Power BI.
+Valores e datas são apresentados pela fonte externa, sem cotações fictícias locais.
+Orçamento comercial: https://petrovina.my.site.com/Externo/orcamento-online
+Link do consultor virtual conforme publicado no portal de orçamento Petrovina.
+Novas fotografias locais, convertidas para WebP a partir dos materiais institucionais:
+media/carga-termica.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/03/43025a2f-b507-40e1-b3d7-4d8895a37b69-1024x576.png
+media/cd-parecis.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/cd-campo-novo-parecis-1024x677.webp
+media/cd-lucas.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/cd-lucas-do-rio-verde-1024x677.webp
+media/cd-agua-boa.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/Captura-de-Tela-2024-02-16-as-08.29.00-1024x677.webp
+media/cd-farroupilha.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/Captura-de-Tela-2024-02-16-as-08.31.22-1024x677.webp
+media/seed-laboratorio.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/IMG_5537-scaled.jpg
+media/seed-analise.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/IMG_5716-scaled.jpg
+media/equipe-mapa.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/SO-MAPA-1024x755.png
+media/equipe-contatos.webp: https://petrovinasementes.com.br/wp-content/uploads/2025/08/legenda-1.png
+media/prime-bag.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/02/bag-ia.png
+media/negocio-producao.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/PRODUCAO-DE-SEMENTES.webp
+media/negocio-commodities.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/COMMODITIES.webp
+media/negocio-armazenagem.webp: https://petrovinasementes.com.br/wp-content/uploads/2024/02/ARMAZENAGEM-1.webp
+Consulta dos materiais oficiais: 14/10/2026. Layout e código locais independentes.

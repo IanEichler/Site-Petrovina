@@ -52,6 +52,23 @@ const crops = {
 };
 const dialog = document.querySelector('.crop-dialog');
 let cropOpener;
+let dialogExit;
+function closeCropDialog() {
+  if (!dialog?.open || dialogExit) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !dialog.animate) {
+    dialog.close();
+    return;
+  }
+  dialog.classList.add('is-closing');
+  dialogExit = dialog.animate([
+    {opacity: 1, transform: 'translateY(0) scale(1)'},
+    {opacity: 0, transform: 'translateY(8px) scale(.985)'}
+  ], {duration: 180, easing: 'cubic-bezier(.4,0,1,1)'});
+  dialogExit.finished.catch(() => {}).then(() => {
+    dialog.close();
+    dialogExit = null;
+  });
+}
 document.querySelectorAll('[data-crop]').forEach(button => {
   button.addEventListener('click', () => {
     const crop = crops[button.dataset.crop];
@@ -71,26 +88,17 @@ document.querySelectorAll('[data-crop]').forEach(button => {
     document.body.classList.add('dialog-open');
   });
 });
-dialog?.querySelector('.dialog-close').addEventListener('click', () => dialog.close());
+dialog?.querySelector('.dialog-close').addEventListener('click', closeCropDialog);
+dialog?.addEventListener('cancel', event => { event.preventDefault(); closeCropDialog(); });
 dialog?.addEventListener('click', event => {
   if (event.target !== dialog) return;
   const rect = dialog.getBoundingClientRect();
-  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) dialog.close();
+  if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closeCropDialog();
 });
-dialog?.addEventListener('close', () => { document.body.classList.remove('dialog-open'); cropOpener?.focus({preventScroll:true}); });
+dialog?.addEventListener('close', () => { dialog.classList.remove('is-closing'); document.body.classList.remove('dialog-open'); cropOpener?.focus({preventScroll:true}); });
 
-// Content is visible without JavaScript; motion simply marks sections entering view.
+// Keep navigation state independent from content motion.
 if ('IntersectionObserver' in window) {
-  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const entryObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (!reducedMotion) entry.target.classList.add('animate-in');
-        entryObserver.unobserve(entry.target);
-      }
-    });
-  }, {threshold:.1});
-  document.querySelectorAll('.section-heading,.eco-panel,.essence-left,.essence-right').forEach(el => entryObserver.observe(el));
   const navObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const link = document.querySelector(`.desktop-nav a[href="#${entry.target.id}"]`);

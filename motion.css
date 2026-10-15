@@ -1,0 +1,121 @@
+/* Shared motion: single entrances, natural scrolling and stable layout. */
+:root { --motion-ease: cubic-bezier(.22,1,.36,1); }
+.motion-title .motion-line { display: block; overflow: hidden; }
+.motion-title .motion-line,
+.motion-title .motion-line-inner { color: inherit !important; }
+.motion-title .motion-line-inner {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 760ms var(--motion-ease), opacity 540ms ease;
+  transition-delay: var(--line-delay,0ms);
+}
+.motion-title.motion-pending .motion-line-inner { opacity: 0; transform: translateY(105%); }
+.motion-copy {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 600ms ease, transform 700ms var(--motion-ease);
+  transition-delay: var(--motion-delay,190ms);
+}
+.motion-copy.motion-pending { opacity: 0; transform: translateY(16px); }
+.motion-card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 580ms ease, transform 720ms var(--motion-ease), background-color 280ms ease, border-color 280ms ease, box-shadow 280ms ease;
+  transition-delay: var(--motion-delay,0ms),var(--motion-delay,0ms),0ms,0ms,0ms;
+}
+.motion-card.motion-pending { opacity: 0; transform: translateY(24px); }
+.motion-media-mask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transition: clip-path 1000ms var(--motion-ease), opacity 700ms ease;
+}
+.motion-media.motion-pending .motion-media-mask { clip-path: inset(0 0 100% 0); opacity: .15; }
+.motion-instant,
+.motion-instant .motion-line-inner,
+.motion-instant .motion-media-mask { transition: none !important; }
+.is-restoring-scroll :is(.motion-card,.motion-copy,.motion-media-mask,.motion-line-inner),
+.motion-pending:focus-within {
+  opacity: 1 !important;
+  transform: none !important;
+  clip-path: none !important;
+  transition: none !important;
+}
+
+/* Discrete feedback belongs to the control, not to the fixed header surface. */
+main .button, .crop-dialog .button {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease, box-shadow 300ms ease, transform 350ms var(--motion-ease);
+}
+main :is(.button,.text-link,.hero-secondary,.service-tile-link,.business-card-link,.article-read) .icon,
+.crop-dialog .button .icon { transition: transform 350ms var(--motion-ease); }
+@media (hover: hover) and (pointer: fine) {
+  main .button:hover, .crop-dialog .button:hover { transform: translateY(-2px); box-shadow: 0 7px 18px #102e2514; }
+  main .button:hover .icon, .crop-dialog .button:hover .icon,
+  main .text-link:hover .icon, .service-tile:hover .service-tile-link .icon { transform: translate(3px,-3px); }
+  .hero-secondary:hover .icon, .primepro-discover:hover .icon { transform: translateY(3px); }
+  .service-tile.is-revealed:hover { box-shadow: 0 10px 28px #061e1b24; }
+}
+
+/* Native section covers keep the same document geometry and scroll position. */
+.home-content, .market-onward {
+  border-radius: 30px 30px 0 0;
+  box-shadow: 0 -16px 42px #0c2a1d20,0 -1px 0 #ffffff80;
+}
+.home-content::before, .market-onward::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  height: 1px;
+  background: linear-gradient(90deg,transparent,#ffffffc0 25%,#ffffffc0 75%,transparent);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* The dialog stays in the top layer until its short exit has finished. */
+.crop-dialog[open] { animation: crop-panel-in 480ms var(--motion-ease) both; }
+.crop-dialog[open]::backdrop { animation: crop-backdrop-in 360ms ease both; }
+.crop-dialog[open] .dialog-image img { animation: crop-image-in 700ms var(--motion-ease) both; }
+.crop-dialog[open] .dialog-content > * { animation: crop-detail-in 540ms var(--motion-ease) both; }
+.crop-dialog[open] .dialog-content > :nth-child(2) { animation-delay: 45ms; }
+.crop-dialog[open] .dialog-content > :nth-child(3) { animation-delay: 85ms; }
+.crop-dialog[open] .dialog-content > :nth-child(n+4) { animation-delay: 120ms; }
+.crop-dialog.is-closing::backdrop { animation: crop-backdrop-out 180ms ease both; }
+.crop-dialog.is-closing .dialog-content > * { animation: none; }
+@keyframes crop-panel-in {
+  from { opacity: 0; transform: translateY(18px) scale(.985); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes crop-backdrop-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes crop-backdrop-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes crop-image-in { from { opacity: .5; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
+@keyframes crop-detail-in { from { opacity: 0; transform: translateY(9px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 680px) {
+  .motion-title .motion-line-inner { transition-duration: 580ms,420ms; transition-delay: calc(var(--line-delay,0ms) * .7); }
+  .motion-copy { transition-duration: 440ms,520ms; }
+  .motion-copy.motion-pending { transform: translateY(10px); }
+  .motion-card { transition-duration: 420ms,520ms,250ms,250ms,250ms; transition-delay: 0ms; }
+  .motion-card.motion-pending { transform: translateY(14px); }
+  .motion-media-mask { transition-duration: 760ms,500ms; }
+  .home-content, .market-onward { border-radius: 22px 22px 0 0; box-shadow: 0 -10px 28px #0c2a1d1a; }
+  .crop-dialog[open] { animation-duration: 360ms; }
+  .crop-dialog[open] .dialog-image img { animation: crop-backdrop-in 440ms ease both; }
+}
+@media (hover: none) {
+  main .button:hover, .crop-dialog .button:hover { transform: none; box-shadow: none; }
+  .crop-card:hover > img { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-title .motion-line-inner,.motion-copy,.motion-card,.motion-media-mask {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+  .crop-dialog[open],.crop-dialog[open]::backdrop,.crop-dialog[open] .dialog-image img,.crop-dialog[open] .dialog-content > * { animation: none !important; }
+}

@@ -61,6 +61,7 @@
         restoring = false;
         root.classList.remove('is-restoring-scroll');
         savePosition();
+        window.dispatchEvent(new CustomEvent('petrovina:scroll-restored'));
       });
     });
   }

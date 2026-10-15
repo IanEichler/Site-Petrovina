@@ -731,8 +731,79 @@ p, .hero-description, .section-heading > p, .essence-lead,
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero { position: sticky; top: 0; z-index: 0; }
-  #solucoes.is-scroll-underlay { position: sticky; top: var(--solutions-pin-top, 0px); z-index: 0; }
+  #solutions-panel.is-scroll-underlay { position: sticky; top: var(--solutions-pin-top, 0px); z-index: 0; }
 }
 @media (max-width: 680px) {
   .home-content, .market-onward { border-radius: 20px 20px 0 0; }
+}
+
+
+/* Solutions: full-width photography and a clear, complete service directory. */
+.solutions--showcase { isolation: isolate; background: #103b29; }
+.solutions--showcase .solutions-backdrop {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% 55%;
+}
+.solutions--showcase::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(90deg,#0b2e21f2,#0b2e21cc 52%,#0b2e219e),linear-gradient(0deg,#0b2e21f5,transparent 75%);
+  pointer-events: none;
+}
+.solutions--showcase .solutions-content { position: relative; padding-block: 84px; }
+.solutions-heading { max-width: 920px; }
+.solutions--showcase .solutions-heading h2 { font-size: var(--type-section); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; color: #fff; }
+.solutions-heading h2 span { color: var(--lime); }
+.solutions-heading > p { max-width: 650px; margin-top: 22px; color: #d5e2ce; font-size: var(--type-body); line-height: 1.75; }
+.solutions-service-grid { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 16px; margin-top: 38px; }
+.service-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 268px;
+  padding: 26px 24px 24px;
+  border: 1px solid #ffffff38;
+  border-radius: 16px;
+  background: #123d2edb;
+  color: #fff;
+  transition: border-color .25s,background .25s;
+}
+.service-tile:hover { border-color: #d4ef7aa6; background: #214c3bed; }
+.service-tile:focus-visible { outline-color: var(--lime); }
+.service-tile h3 { font-size: var(--type-card); font-weight: 500; line-height: 1.25; letter-spacing: -.035em; }
+.service-tile > p { margin-top: 14px; margin-bottom: 28px; color: #d0dfc9; font-size: var(--type-body); line-height: 1.7; }
+.service-tile-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin-top: auto; padding-top: 18px; border-top: 1px solid #ffffff24; color: var(--lime); font-size: var(--type-small); line-height: 1.5; }
+.service-tile-link .icon { width: 17px; height: 17px; transition: transform .25s; }
+.service-tile:hover .service-tile-link .icon { transform: translate(2px,-2px); }
+.solutions-support { margin-top: 32px; padding-top: 28px; border-top: 1px solid #ffffff38; }
+.solutions-support > h3 { color: #fff; font-size: var(--type-card); font-weight: 450; line-height: 1.4; letter-spacing: -.025em; }
+.solutions-support-links { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin-top: 14px; }
+.solutions-support-links a { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 48px; padding-block: 12px; border-bottom: 1px solid #ffffff38; color: #e0ead9; font-size: var(--type-small); line-height: 1.5; transition: color .2s,border-color .2s; }
+.solutions-support-links a:hover { color: var(--lime); border-color: var(--lime); }
+.solutions-support-links a:last-child { color: var(--lime); }
+.solutions-support-links .icon { width: 16px; height: 16px; }
+@media (max-width: 1100px) {
+  .solutions-service-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .service-tile { min-height: 240px; }
+  .solutions-support-links { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 28px; }
+}
+@media (max-width: 680px) {
+  .solutions--showcase .solutions-content { padding-block: 60px; }
+  .solutions--showcase .solutions-backdrop { height: 800px; object-position: 65% 50%; }
+  .solutions--showcase::before { background: linear-gradient(180deg,#0b2e21b8,#0b2e21e0 360px,#0b2e21 760px); }
+  .solutions-heading > p { margin-top: 21px; }
+  .solutions-service-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
+  .service-tile { min-height: 0; padding: 24px; border-radius: 13px; }
+  .service-tile > p { margin-top: 12px; margin-bottom: 23px; }
+  .service-tile-link { padding-top: 16px; }
+  .solutions-support { margin-top: 28px; padding-top: 25px; }
+  .solutions-support-links { grid-template-columns: 1fr; gap: 0; margin-top: 12px; }
 }

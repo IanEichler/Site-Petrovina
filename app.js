@@ -1,6 +1,6 @@
 'use strict';
 
-const solutionsUnderlay = document.querySelector('#solucoes');
+const solutionsUnderlay = document.querySelector('#solutions-panel');
 if (solutionsUnderlay) {
   function sizeSolutionsUnderlay() {
     // Let a tall section finish scrolling before its successor covers it.

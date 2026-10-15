@@ -722,6 +722,11 @@ p, .hero-description, .section-heading > p, .essence-lead,
 
 html.is-restoring-scroll { scroll-behavior: auto !important; overflow-anchor: none; }
 
+/* Mobile uses text and navigation controls without decorative pictograms. */
+@media (max-width: 1100px) {
+  .proof-message .icon, .dialog-benefits .icon, .footer-bottom .icon { display: none; }
+}
+
 /* The following content rises over the opening banner with native page scrolling. */
 .home-content, .market-onward {
   position: relative;

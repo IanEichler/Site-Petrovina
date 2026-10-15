@@ -720,6 +720,8 @@ p, .hero-description, .section-heading > p, .essence-lead,
 }
 
 
+html.is-restoring-scroll { scroll-behavior: auto !important; overflow-anchor: none; }
+
 /* The following content rises over the opening banner with native page scrolling. */
 .home-content, .market-onward {
   position: relative;

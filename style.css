@@ -725,7 +725,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
 
 
 /* The following content rises over the opening banner with native page scrolling. */
-.home-content {
+.home-content, .market-onward {
   position: relative;
   z-index: 1;
   isolation: isolate;
@@ -735,7 +735,8 @@ p, .hero-description, .section-heading > p, .essence-lead,
 }
 @media (prefers-reduced-motion: no-preference) {
   .hero { position: sticky; top: 0; z-index: 0; }
+  #solucoes.is-scroll-underlay { position: sticky; top: var(--solutions-pin-top, 0px); z-index: 0; }
 }
 @media (max-width: 680px) {
-  .home-content { border-radius: 20px 20px 0 0; }
+  .home-content, .market-onward { border-radius: 20px 20px 0 0; }
 }

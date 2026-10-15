@@ -1,5 +1,21 @@
 'use strict';
 
+const solutionsUnderlay = document.querySelector('#solucoes');
+if (solutionsUnderlay) {
+  function sizeSolutionsUnderlay() {
+    // Let a tall section finish scrolling before its successor covers it.
+    const top = Math.min(0, window.innerHeight - solutionsUnderlay.offsetHeight);
+    solutionsUnderlay.style.setProperty('--solutions-pin-top', `${top}px`);
+    solutionsUnderlay.classList.add('is-scroll-underlay');
+  }
+  sizeSolutionsUnderlay();
+  window.addEventListener('resize', sizeSolutionsUnderlay, {passive: true});
+  if ('ResizeObserver' in window) {
+    const solutionsSizeObserver = new ResizeObserver(sizeSolutionsUnderlay);
+    solutionsSizeObserver.observe(solutionsUnderlay);
+  }
+}
+
 const header = document.querySelector('.header');
 const backTop = document.querySelector('.back-top');
 let scrollPending = false;

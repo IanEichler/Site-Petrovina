@@ -653,16 +653,17 @@ p, .hero-description, .section-heading > p, .essence-lead,
   position: absolute;
   z-index: -1;
   inset: 0;
-  background: linear-gradient(90deg,#0b281cf5 0%,#0b281ce6 30%,#0b281c94 58%,#0b281c1a 100%),linear-gradient(0deg,#0b281c66,transparent 60%);
+  background: linear-gradient(90deg,#0b281c94,#0b281ccc 50%,#0b281c94),linear-gradient(0deg,#0b281c66,transparent 60%);
   pointer-events: none;
 }
 .contact--closing .contact-inner {
   display: flex;
   align-items: center;
+  justify-content: center;
   min-height: 560px;
   padding-block: 96px;
 }
-.contact--closing .contact-copy { width: 100%; max-width: 750px; }
+.contact--closing .contact-copy { width: 100%; max-width: 750px; text-align: center; }
 .contact--closing h2 {
   margin: 0;
   font-size: var(--type-section);
@@ -674,7 +675,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
 .contact--closing h2 span { display: block; color: var(--lime); }
 .contact--closing .contact-copy > p {
   max-width: 470px;
-  margin-top: 24px;
+  margin: 24px auto 0;
   font-size: var(--type-body);
   line-height: 1.8;
   color: #e0e8dc;
@@ -682,14 +683,15 @@ p, .hero-description, .section-heading > p, .essence-lead,
 .contact--closing .contact-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   max-width: none;
-  margin-top: 32px;
+  margin: 32px auto 0;
   padding: 0;
 }
 .contact--closing .contact-actions .button {
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
   width: auto;
   min-height: 54px;
@@ -707,7 +709,6 @@ p, .hero-description, .section-heading > p, .essence-lead,
 .contact--closing .contact-actions .contact-secondary:hover { background: #ffffff18; border-color: #ffffffb0; }
 @media (max-width: 900px) {
   .contact--closing .contact-inner { min-height: 520px; padding-block: 76px; }
-  .contact--closing::after { background: linear-gradient(90deg,#0b281cf2 0%,#0b281cda 45%,#0b281c55 100%); }
 }
 @media (max-width: 680px) {
   .contact--closing .contact-inner { min-height: 570px; padding-block: 64px; }

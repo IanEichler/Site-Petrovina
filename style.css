@@ -403,8 +403,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
 }
 
 
-/* White header with one independently animated surface.
-   It overlays the hero; no light document-flow strip can appear behind it. */
+/* Fixed white header, displayed in its final compact shape from the first paint. */
 .header, .header.is-scrolled {
   position: fixed;
   inset: 0 0 auto;
@@ -430,8 +429,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
   border-radius: 0;
   box-shadow: none;
   pointer-events: none;
-  transition: inset .48s var(--ease), border-radius .48s var(--ease),
-              border-color .48s var(--ease), box-shadow .48s var(--ease);
+  transition: none;
 }
 .header.is-scrolled::before {
   inset: 14px max(32px, calc((100% - 1160px) / 2)) 2px;
@@ -451,8 +449,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
   border-radius: 0;
   box-shadow: none;
   backdrop-filter: none;
-  transition: width .48s var(--ease), height .48s var(--ease),
-              transform .48s var(--ease);
+  transition: none;
 }
 .header-inner {
   width: min(1320px, calc(100% - 104px));
@@ -464,7 +461,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
   height: 72px;
   transform: translateY(14px);
 }
-.brand { width: 174px; transition: width .48s var(--ease); }
+.brand { width: 174px; transition: none; }
 .brand img { filter: none; }
 .header.is-scrolled .brand { width: 150px; }
 .desktop-nav a { color: #52614e; white-space: nowrap; }
@@ -475,8 +472,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
   color: #fff;
   border-color: var(--forest);
   border-radius: 7px;
-  transition: background-color .25s ease, border-radius .48s var(--ease),
-              transform .25s ease;
+  transition: background-color .25s ease, transform .25s ease;
 }
 .header-cta:hover { background: #2b5640; color: #fff; }
 .header-cta-icon { border-color: #ffffff45; }
@@ -493,8 +489,7 @@ p, .hero-description, .section-heading > p, .essence-lead,
 }
 .mobile-nav > a { color: var(--forest); border-color: #e7ecdf; }
 .mobile-nav .mobile-contact { background: var(--forest); color: #fff; }
-/* The hero occupies the same total height as before, but its photograph now
-   extends underneath the fixed header throughout the full transition. */
+/* The opening photograph extends underneath the fixed compact header. */
 .hero { min-height: 708px; height: min(808px, 100svh); padding-top: 88px; }
 @media (max-width: 1150px) {
   .header-inner { width: calc(100% - 72px); }

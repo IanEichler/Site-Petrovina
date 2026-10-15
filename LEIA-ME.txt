@@ -23,7 +23,7 @@ credito-proprio.html: modalidade de compra diretamente com a Petrovina.
 
 FUNCIONALIDADES
 Menu de serviços acessível por clique e teclado; menu móvel com subcategorias.
-Cabeçalho branco que encolhe após 180 px de rolagem e retorna abaixo de 120 px.
+Cabeçalho branco compacto e arredondado, fixo desde a abertura da página.
 Detalhes de cinco culturas em janela acessível; seleção de cultura no orçamento.
 O acesso ao portfólio a partir do orçamento abre a cultura selecionada na página inicial.
 Painel externo de soja carregado somente após o clique em Carregar painel.

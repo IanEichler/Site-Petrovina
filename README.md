@@ -50,7 +50,7 @@ npm run build
 - Central de negócios e soluções.
 - Petrovina Prime, distribuição, carga térmica, Freereplant, equipe comercial,
   Seed Prime e crédito próprio.
-- Menu responsivo, cabeçalho que se recolhe na rolagem, detalhes das culturas
+- Menu responsivo, cabeçalho compacto e arredondado desde a abertura, detalhes das culturas
   e perguntas frequentes.
 
 ## Serviços externos e referências

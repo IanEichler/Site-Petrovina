@@ -20,10 +20,7 @@ const header = document.querySelector('.header');
 const backTop = document.querySelector('.back-top');
 let scrollPending = false;
 function updateScroll() {
-  const scrollY = Math.max(0, window.scrollY);
-  // Separate enter/leave thresholds prevent flicker near the compact state.
-  const compact = header.classList.contains('is-scrolled') ? scrollY > 120 : scrollY > 180;
-  header.classList.toggle('is-scrolled', compact);
+  // The header is always compact; scrolling only updates the back-to-top button.
   backTop.hidden = window.scrollY < 650;
   scrollPending = false;
 }

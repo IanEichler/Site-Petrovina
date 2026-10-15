@@ -130,3 +130,20 @@ media/primepro-eco-bag-hd.webp: https://petrovinasementes.com.br/wp-content/uplo
 media/primepro-eco-semente-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/07/PrimeproEco-1.png
 media/primepro-referencias-hd.webp: https://petrovinasementes.com.br/wp-content/uploads/2026/07/selos-2-1-scaled.png
 WebP com variantes responsivas, sem ampliar artificialmente os arquivos de origem. Os recortes são feitos pelo CSS e preservam o arquivo completo.
+
+ATUALIZAÇÃO DA VITRINE E DO PORTFÓLIO — 15/10/2026
+media/comercializacao-soja-hd.webp: imagem editorial do site oficial, convertida para WebP com variantes de 800 e 480 px, sem ampliação.
+Fonte: https://petrovinasementes.com.br/wp-content/uploads/2023/01/1674841185939-1024x686.webp
+
+Dados de cultivares em portfolio-data.js: nomes e tecnologias transcritos do portfólio oficial. Não representam estoque ou disponibilidade atual.
+Soja (36 cultivares): https://petrovinasementes.com.br/semente-de-soja/
+Milho (11 híbridos, referência Safra 25/26): https://petrovinasementes.com.br/sementes-de-milho/
+Sorgo (2 híbridos, referência Safra 24/25): https://petrovinasementes.com.br/sementes-de-sorgo/
+Algodão: https://petrovinasementes.com.br/sementes-de-algodao/
+Brachiaria: https://petrovinasementes.com.br/sementes-de-brachiaria/
+Ciclos regionais e grupos de maturidade verificados nas fichas RAPTOR I2X, OLIMPO IPRO e TMG INGÁ I2X; cada registro aponta para sua fonte oficial. Os intervalos exibidos resumem apenas as regiões com ciclo numérico publicado.
+Ciclo de algodão: fichas 2058B3RF, 2292B3XF e 3493B2RF, vinculadas em cada registro. O índice oficial identifica 3493 como B3RF, mas a ficha detalhada o identifica como B2RF; adotado o nome da ficha.
+Os links inconsistentes do índice de soja (IMPETO I2X, C2795 CE, TMG JATOBÁ IPRO, 76KA72 CE) apontam para o portfólio oficial geral. Os códigos de tecnologia são apresentados como publicados, sem expansão ou promessa técnica adicional.
+O catálogo de brachiaria não foi acessível para verificação; por isso a interface oferece orientação especializada e não inventa nomes de cultivares.
+Fotos do laboratório, transporte e centro de distribuição usadas na home são registros institucionais oficiais já relacionados acima. Não foram adicionados depoimentos sem fonte verificável.
+A seleção de cultura/cultivar é preservada no resumo local. O portal externo recebe o usuário pelo endereço oficial; não há integração de pré-preenchimento ou envio automático de dados.

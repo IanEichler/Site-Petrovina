@@ -43,18 +43,13 @@ document.addEventListener('keydown', event => { if (event.key === 'Escape') setM
 document.addEventListener('click', event => { if (!header.contains(event.target)) setMenu(false); });
 window.matchMedia('(min-width:1101px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
 
-const crops = {
-  soja: {name:'Soja', image:'media/soja-hd.webp', description:'O potencial da sua próxima safra começa na escolha da semente. Explore as cultivares de soja da Petrovina e conte com a orientação do nosso time para encontrar a melhor opção para o seu campo.', path:'semente-de-soja/'},
-  milho: {name:'Milho', image:'media/milho-hd.webp', description:'Cada ciclo traz uma nova oportunidade. Conheça o portfólio de milho da Petrovina e converse com um especialista sobre as opções para o seu planejamento de plantio.', path:'sementes-de-milho/'},
-  sorgo: {name:'Sorgo', image:'media/sorgo-hd.webp', description:'Novas possibilidades para o seu planejamento agrícola. Explore o portfólio de sorgo e receba orientação para escolher a semente de acordo com a realidade da sua lavoura.', path:'sementes-de-sorgo/'},
-  algodao: {name:'Algodão', image:'media/algodao-hd.webp', description:'Qualidade que começa na origem e acompanha o desenvolvimento da cultura. Descubra as sementes de algodão da Petrovina e conte com uma equipe próxima do seu campo.', path:'sementes-de-algodao/'},
-  brachiaria: {name:'Brachiaria', image:'media/brachiaria-hd.webp', description:'Uma boa base abre espaço para novos resultados. Conheça as opções de brachiaria da Petrovina e encontre, com nosso time, a escolha para o seu próximo ciclo.', path:'sementes-de-brachiaria/'}
-};
+const crops = window.PetrovinaPortfolio.cultures;
 const dialog = document.querySelector('.crop-dialog');
 let cropOpener;
 let dialogExit;
 function closeCropDialog() {
   if (!dialog?.open || dialogExit) return;
+  window.PetrovinaPortfolioView.closing();
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !dialog.animate) {
     dialog.close();
     return;
@@ -81,11 +76,16 @@ document.querySelectorAll('[data-crop]').forEach(button => {
     image.srcset = `${base}-480.webp 480w, ${base}-800.webp 800w, ${crop.image} 1122w`;
     image.sizes = '(max-width: 680px) calc(100vw - 30px), 385px';
     image.alt = `Cultura de ${crop.name.toLowerCase()}`;
+    const mobilePhoto = dialog.querySelector('.catalog-mobile-photo img');
+    mobilePhoto.src = image.src;
+    mobilePhoto.srcset = image.srcset;
     dialog.querySelector('.dialog-description').textContent = crop.description;
     dialog.querySelector('.dialog-portfolio').href = `https://petrovinasementes.com.br/${crop.path}`;
     dialog.querySelector('.dialog-portfolio').setAttribute('aria-label', `Ver portfólio completo de ${crop.name}`);
+    window.PetrovinaPortfolioView.render(button.dataset.crop);
     dialog.showModal();
     document.body.classList.add('dialog-open');
+    window.PetrovinaPortfolioView.opened();
   });
 });
 dialog?.querySelector('.dialog-close').addEventListener('click', closeCropDialog);

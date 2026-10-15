@@ -76,3 +76,13 @@ materiais institucionais pertencem aos respectivos titulares.
 - `scripts/build.mjs`: geração da pasta pública `dist/`.
 - `vercel.json`: configuração de publicação.
 - `server.cjs`: servidor exclusivo do desenvolvimento local.
+
+## Vitrine e portfólio
+
+A home reúne a exploração das cinco culturas e o acesso ao orçamento na mesma vitrine. Cada card oferece um botão para abrir os detalhes e um link independente para pedir orçamento. O banner inicial também leva diretamente ao orçamento.
+
+`portfolio-data.js` reúne nomes, tecnologias, fontes e os detalhes técnicos verificados. As referências de safra de milho (25/26) e sorgo (24/25) permanecem explícitas. O catálogo oferece busca sem acentos, filtro por tecnologia, carregamento progressivo e ciclos por região quando publicados. Brachiaria apresenta orientação e contato, pois não há nomes de cultivares confirmados no material acessível. Fontes e critérios estão em `CREDITOS.txt`.
+
+A escolha em `orcamento.html?cultura=soja&cultivar=...` é validada contra o catálogo antes de aparecer no resumo. A cotação continua no portal externo oficial, onde o usuário confirma os produtos; não há envio automático ou integração de pré-preenchimento com Salesforce.
+
+O histórico preserva a posição da página, a cultura aberta, a busca, o filtro e a posição interna do catálogo ao voltar do orçamento. A home usa fotos institucionais distintas de laboratório, transporte e distribuição, sem depoimentos fictícios.

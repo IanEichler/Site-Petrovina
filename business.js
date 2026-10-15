@@ -36,11 +36,16 @@ if (location.pathname.endsWith('/negocios-solucoes.html')) businessTrigger?.clas
 
 const cultureNames = {soja:'soja',milho:'milho',sorgo:'sorgo',algodao:'algodão',brachiaria:'brachiaria'};
 const requestedCulture = new URLSearchParams(location.search).get('cultura');
+const requestedCultivar = new URLSearchParams(location.search).get('cultivar');
 const quoteForm = document.querySelector('.quote-form');
 function updateQuoteCulture() {
   const selected = quoteForm.querySelector('input[name="cultura"]:checked')?.value || 'soja';
   quoteForm.querySelector('[data-quote-name]').textContent = cultureNames[selected];
   quoteForm.querySelector('[data-quote-portfolio]').href = `./?cultura=${selected}#sementes`;
+  const cultivar = selected === requestedCulture ? window.PetrovinaPortfolio.selection(selected, requestedCultivar) : null;
+  const selection = quoteForm.querySelector('[data-quote-selection]');
+  selection.hidden = !cultivar;
+  selection.textContent = cultivar ? `Cultivar de interesse: ${cultivar.name}` : '';
 }
 if (quoteForm) {
   if (Object.hasOwn(cultureNames, requestedCulture)) quoteForm.querySelector(`input[value="${requestedCulture}"]`).checked = true;
@@ -48,8 +53,10 @@ if (quoteForm) {
   quoteForm.addEventListener('submit', event => event.preventDefault());
   updateQuoteCulture();
 }
-if (document.querySelector('.crop-dialog') && Object.hasOwn(cultureNames, requestedCulture)) {
-  document.querySelector(`[data-crop="${requestedCulture}"]`)?.click();
+if (document.querySelector('.crop-dialog')) {
+  const saved = history.state?.petrovinaCatalog;
+  const culture = saved?.open ? saved.key : (!saved ? requestedCulture : null);
+  if (Object.hasOwn(cultureNames, culture)) document.querySelector(`[data-crop="${culture}"]`)?.click();
 }
 
 document.querySelector('[data-load-market]')?.addEventListener('click', event => {
